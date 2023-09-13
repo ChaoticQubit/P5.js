@@ -1,0 +1,18 @@
+version: '3.1'
+services:
+  p5-server:
+    image: node:latest
+    container_name: p5.js
+    restart: unless-stopped
+    working_dir: /app
+    command:
+      - /bin/sh
+      - -c
+      - |
+        npm install -g browser-sync
+        browser-sync start --server -f -w
+    volumes:
+      - ./:/app:ro
+    ports:
+      - 3000:3000
+      - 3001:3001
