@@ -25,6 +25,7 @@ function setup() {
 
 function draw() {
   background(0);
+  translate(windowWidth/2, windowHeight/2);
   textAlign(CENTER, CENTER);
   textSize(20);
   createSpiral();
