@@ -25,7 +25,6 @@ function setup() {
 
 function draw() {
   background(0);
-  translate(width, height);
   textAlign(CENTER, CENTER);
   textSize(20);
   createSpiral();
@@ -34,4 +33,8 @@ function draw() {
   createCircle("#EFCC00", oneRadius * 2, content="+1° C");
   createCircle("#EFCC00", monthsRadius * 2);
   getYear();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
